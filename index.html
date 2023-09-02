@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>手机页面板块</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎访问我们的手机页面！</h1>
+    <p>正在检测您的设备...</p>
+    
+    <script>
+        // 检测设备类型
+        var userAgent = navigator.userAgent.toLowerCase();
+        
+        if (/mobile/i.test(userAgent)) {   // 移动设备
+            window.location.href = 'mobile.html';
+        } else {   // 非移动设备
+            window.location.href = 'desktop.html';
+        }
+    </script>
+</body>
+</html>

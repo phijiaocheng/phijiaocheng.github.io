@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>游戏名 - 游玩教程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        h2 {
+            color: #777;
+        }
+        
+        p {
+            line-height: 1.5;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+        }
+        
+        .step img {
+            display: block;
+            max-width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+    <style>
+        /* 调整手机屏幕样式 */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            .step img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>游戏名 游玩教程</h1>
+    
+    <div class="content">
+        <div id="step1" class="step">
+            <h2>步骤一：开始游戏</h2>
+            <p>首先，打开游戏并点击“开始游戏”按钮。</p>
+            <img src="start_button.png" alt="开始游戏按钮">
+        </div>
+        
+        <div id="step2" class="step">
+            <h2>步骤二：选择角色</h2>
+            <p>在游戏开始后，你需要选择一个角色。角色的选择可能会影响你在游戏中的体验和能力。</p>
+            <img src="character_selection.png" alt="角色选择界面">
+        </div>
+        
+        <div id="step3" class="step">
+            <h2>步骤三：控制角色</h2>
+            <p>使用键盘上的方向键来控制你的角色移动。按下空格键可以让你的角色进行跳跃。</p>
+            <img src="keyboard_controls.png" alt="键盘控制示意图">
+        </div>
+        
+        <div id="step4" class="step">
+            <h2>步骤四：目标与任务</h2>
+            <p>每个游戏都有不同的目标和任务。确保你明白你需要达成的目标，并完成交给你的任务。</p>
+            <img src="game_objective.png" alt="游戏目标示意图">
+        </div>
+        
+        <div id="step5" class="step">
+            <h2>步骤五：获取奖励</h2>
+            <p>在游戏中，你会遇到各种各样的奖励。这些奖励可能会增加你的分数、生命值或其他能力。</p>
+            <img src="reward.png" alt="奖励示意图">
+        </div>
+        
+        <div id="step6" class="step">
+            <h2>步骤六：完成游戏</h2>
+            <p>当你达到游戏的最终目标或完成所有任务时，你就完成了游戏。祝贺你！</p>
+            <img src="game_completed.png" alt="游戏完成示意图">
+        </div>
+    </div>
+    
+    <script>
+        // 获取所有侧边栏链接
+        var sidebarLinks = document.querySelectorAll('.sidebar a');
+        
+        // 为每个链接添加点击事件监听器
+        sidebarLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();   // 阻止默认滚动行为
+                
+                // 获取目标步骤的 ID
+                var stepId = link.getAttribute('href').substring(1);
+                
+                // 获取目标步骤元素
+                var stepElement = document.getElementById(stepId);
+                
+                // 滚动到目标步骤位置
+                stepElement.scrollIntoView({behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>
